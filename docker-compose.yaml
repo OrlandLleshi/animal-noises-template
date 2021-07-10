@@ -1,0 +1,17 @@
+version:'3.8'
+services:
+  server:
+    container_name: animal_noises_server
+    image: orlandlleshi/animal_noises_server
+    build: ./server
+    ports: 
+    - target: 5000
+    - published: 5000 
+    
+
+  animal_api:
+    container_name: animal_noises_api
+      image: orlandlleshi/animal_noises_api
+      build: ./animal_api
+    
+      
